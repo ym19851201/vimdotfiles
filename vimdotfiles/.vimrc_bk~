@@ -1,0 +1,5 @@
+"SpellRare
+"hi Pmenu ctermbg=lightcyan ctermfg=black
+set background=dark
+hi Pmenu ctermbg=green ctermfg=black
+

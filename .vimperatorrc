@@ -1,0 +1,59 @@
+" その他設定ファイル
+source ~/.vimperator/colors/tab.vimp
+
+" jk移動量設定
+" _smooziee導入のため廃止
+" map j 5<C-e>
+" map k 5<C-y>
+" _smooziee設定
+let g:smooziee_scroll_amount=180
+let g:smooziee_interval=20
+
+" タブ移動方法追加
+noremap <Left> gT
+noremap <Right> gt
+noremap <S-k> gT
+noremap <S-J> gt
+
+" ショートカット(gmail, facebook)
+noremap gm :tabopen https://mail.google.com/mail/?hl=ja&shva=1#inbox<CR>
+noremap <silent> ,fb :tabopen http://www.facebook.com/<CR>
+
+" ブックマーク関係
+noremap <silent> bm :bmark<Space>-folder<Space>
+noremap BM :bmarks<Space>
+nmap  ,s :source ~/.vimperatorrc<CR>q:echo '.vimperatorrc has been read!'<CR><CR>
+
+" ヒント文字
+set hintchars=hjklasdfyuiopqwert
+" ヒントモード時
+style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+
+" リンクの色 (set linkbgcolor=aqua)
+highlight HintElem background-color:#9999FF;
+" アクティブなリンクの色 (set activelinkbgcolor=lightblue)
+highlight HintActive background:#rbga(00,255,204,0.2);
+set! ui.caretWidth=5
+
+nnoremap v ;c
+" multi-requesterキーマッピング
+vmap <silent> mr y<Esc><Esc>:mr  <M-v><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Right><Right><Right>
+vmap <C-a> y<Esc><Esc>:mr alc <M-v><CR>
+vmap <C-w> y<Esc><Esc>:mr wikipedia-ja <M-v><CR>
+
+" サジェスト設定
+set suggestengines=g
+nmap t :set cpt=slf<CR>:tabopen 
+nmap T :set cpt=slf<CR>:tabopen google 
+nmap s :set cpt=s<CR>:tabopen google 
+
+vmap p y<Esc><Esc>P
+
+" 透明
+style -name personas chrome://* <<EOM
+#main-window { background-repeat: repeat-y !important; }
+#browser-bottombox { background-image: none !important; }
+#liberator-multiline-output,  #liberator-completions { background: transparent !important; }
+#content tabpanels { background-color: transparent !important; }
+EOM
+autocmd LocationChange .* :js getBrowser().mCurrentBrowser.collapsed = buffer.URL == "about:blank" ? true : false

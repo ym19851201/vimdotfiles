@@ -1,0 +1,11 @@
+"SpellRare
+"hi Pmenu ctermbg=lightcyan ctermfg=black
+set background=dark
+hi Pmenu ctermbg=green ctermfg=black
+hi PmenuSel ctermbg=4
+hi PmenuSbar ctermbg=2
+hi PmenuThumb ctermfg=3
+hi Repeat ctermfg=green
+hi LineNr ctermfg=green
+hi Function ctermfg=green
+
