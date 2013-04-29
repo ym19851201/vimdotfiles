@@ -35,8 +35,8 @@ inoremap , ,<Space>
 
 
 "タイル間移動
-nmap gf <C-w>w
-nmap gb <C-w>W
+"nmap gf <C-w>w
+"nmap gb <C-w>W
 nmap <Tab> <C-w>w
 nmap <S-Tab> <C-w>W
 "タイルサイズ変更
@@ -102,6 +102,8 @@ Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/vimshell'
 Bundle 'h1mesuke/unite-outline'
+Bundle 'EnhCommentify.vim'
+Bundle 'rails.vim'
 filetype plugin indent on
 
 " allow backspacing over everything in insert mode

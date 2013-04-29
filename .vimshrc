@@ -1,8 +1,4 @@
-#vimっぽいキー操作
-bindkey -v
-
 #タブ補完
-autoload -U compinit
 compinit
 #小文字でも補完
 #zstyle ':completion:*' matcer-list 'm:{a-z}={A-Z}'
