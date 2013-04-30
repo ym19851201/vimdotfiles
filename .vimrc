@@ -7,11 +7,17 @@ source ~/vimdotfiles/.vimrc.unite
 
 " クリップボード共通か設定
 set clipboard=unnamed,autoselect
+"ヤンクやりやすくなる？
+vnoremap <silent> <C-p> "0p<CR>"
+
 " 行数セット
 set number
 ".vimrc読み込み
 nmap ,s :source ~/.vimrc<CR>
 nmap .rc :vsp<CR>:e ~/.vimrc<CR>
+
+" カレントディレクトリコマンド
+nmap ,cd :cd %:h<CR>
 
 " カッコ設定
 inoremap { {}<Left>
@@ -33,7 +39,6 @@ inoremap , ,<Space>
 "inoremap  + <Space>+<Space>
 "inoremap  - <Space>-<Space>
 
-
 "タイル間移動
 "nmap gf <C-w>w
 "nmap gb <C-w>W
@@ -44,10 +49,6 @@ nmap <S-Right> <C-w>5>
 nmap <S-Left> <C-w>5<
 nmap <S-Up> <C-w>5+
 nmap <S-Down> <C-w>5-
-
-"ヤンクやりやすくなる？
-vnoremap <silent> <C-p> "0p<CR>"
-
 
 "カーソル表示
 set cursorline
@@ -88,12 +89,9 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-"Bundle 'thinca/vim-quickrun'
 Bundle 'neocomplcache'
 Bundle 'vim-powerline'
-"Bundle 'Powerline'
 Bundle 'Shougo/unite.vim'
-"Bundle 'quickrun.vim'
 Bundle 'thinca/vim-quickrun'
 "Bundle 'neocomplcache-snippets_complete'
 Bundle 'ZenCoding.vim'
@@ -104,6 +102,7 @@ Bundle 'Shougo/vimshell'
 Bundle 'h1mesuke/unite-outline'
 Bundle 'EnhCommentify.vim'
 Bundle 'rails.vim'
+Bundle 'open-browser.vim'
 filetype plugin indent on
 
 " allow backspacing over everything in insert mode
@@ -118,12 +117,6 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
-
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, 
-"t", 
-"", 
-"g")
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -208,8 +201,7 @@ let g:neosnippet#snippets_directory = '~/.vim/bundle/neosnippet/snippets'
 " crontab保存用設定
 autocmd BufRead /tmp/crontab.* :set nobackup nowritebackup
 
-" vimfiler
-nnoremap ,vf :VimFiler -split -simple -winwidth=35 -no-quit<CR>
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_safe_mode_by_default = 0
-nnoremap <silent> ,fe :<C-u>VimFilerBufferDir -quit<CR>
+"open-browser.vim設定
+let g:netrw_nogx = 1
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
