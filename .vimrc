@@ -27,15 +27,14 @@ inoremap " ""<Left>
 inoremap ' ''<Left>
 
 " イコール設定
-inoremap = <Space>=<Space>
-inoremap == <Space>==<Space>
-inoremap =n =
-inoremap  += <Space>+=<Space>
-inoremap  -= <Space>-=<Space>
-inoremap >= <Space>>=<Space>
-inoremap <= <Space><=<Space>
-inoremap => <Space>=><Space>
-inoremap , ,<Space>
+"inoremap = <Space>=<Space>
+"inoremap == <Space>==<Space>
+"inoremap  += <Space>+=<Space>
+"inoremap  -= <Space>-=<Space>
+"inoremap >= <Space>>=<Space>
+"inoremap <= <Space><=<Space>
+"inoremap => <Space>=><Space>
+"inoremap , ,<Space>
 "inoremap  + <Space>+<Space>
 "inoremap  - <Space>-<Space>
 

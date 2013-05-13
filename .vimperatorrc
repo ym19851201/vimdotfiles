@@ -25,7 +25,10 @@ noremap BM :bmarks<Space>
 nmap  ,s :source ~/.vimperatorrc<CR>q:echo '.vimperatorrc has been read!'<CR><CR>
 
 " ヒント文字
-set hintchars=hjklasdfyuiopqwert
+"set hintchars=hjklasdfyuiopqwert
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+set previouspattern=^前, \b前, \\bprev|previous\\b, ^<$, ^(<<|«)$, ^(<|«), (<|«)$
+set nextpattern=^次, \b次, \\bnext\\b, ^>$, ^(>>|»)$, ^(>|»), (>|»)$, \\bmore\\b
 " ヒントモード時
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
