@@ -26,6 +26,11 @@ inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
 
+" タブ設定
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 " イコール設定
 "inoremap = <Space>=<Space>
 "inoremap == <Space>==<Space>
@@ -102,6 +107,7 @@ Bundle 'h1mesuke/unite-outline'
 Bundle 'EnhCommentify.vim'
 Bundle 'rails.vim'
 Bundle 'open-browser.vim'
+Bundle 'thinca/vim-ref'
 filetype plugin indent on
 
 " allow backspacing over everything in insert mode
@@ -204,3 +210,23 @@ autocmd BufRead /tmp/crontab.* :set nobackup nowritebackup
 let g:netrw_nogx = 1
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
+"webdictサイト設定
+let g:ref_source_webdict_sites = {
+\ 'je':{
+\    'url': 'http://dictionary.infoseek.ne.jp/jeword/%s', 
+\  }, 
+\  'ej': {
+\    'url': 'http://dictionary.infoseek.ne.jp/ejword/%s', 
+\  }, 
+\  'wiki': {
+\    'url': 'http://ja.wikipedia.org/wiki/%s', 
+\  }, 
+\}
+" ref.vims設定
+nmap ,rd :<C-u>Ref webdict<Space>
+nmap ,rw :<C-u>Ref webdict wiki<Space>
+let g:ref_source_webdict_sites.default = 'ej'
+let g:ref_source_webdict_linenumber = 35
+let g:ref_source_webdict_encoding = 'UTF-8'
+

@@ -31,7 +31,7 @@ set previouspattern=^前, \b前, \\bprev|previous\\b, ^<$, ^(<<|«)$, ^(<|«), (
 set nextpattern=^次, \b次, \\bnext\\b, ^>$, ^(>>|»)$, ^(>|»), (>|»)$, \\bmore\\b
 " ヒントモード時
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
-highlight! Hint font-size: 12pt; font-weight:bold; background: rgba(51,170,51,0.8); color: white; font-family: Ricty,monaco,monospace; text-transform:uppercase;
+highlight! Hint font-size: 9pt; background: #33aa33; color: white; font-family: Ricty,monaco,monospace;
 
 " リンクの色 (set linkbgcolor=aqua)
 highlight HintElem background-color:#9999FF;
