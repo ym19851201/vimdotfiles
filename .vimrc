@@ -108,6 +108,8 @@ Bundle 'EnhCommentify.vim'
 Bundle 'rails.vim'
 Bundle 'open-browser.vim'
 Bundle 'thinca/vim-ref'
+Bundle 'mbbill/undotree'
+Bundle 'YankRing.vim'
 filetype plugin indent on
 
 " allow backspacing over everything in insert mode
@@ -230,3 +232,17 @@ let g:ref_source_webdict_sites.default = 'ej'
 let g:ref_source_webdict_linenumber = 35
 let g:ref_source_webdict_encoding = 'UTF-8'
 
+" undotrees設定
+nmap ,u :UndotreeToggle<CR>
+let g:undotree_SetFocus_WhenToggle=1
+let g:undotree_SplitLocation='topleft'
+let g:undotree_SplitWidth=35
+let g:undotree_diffAutoOpen=1
+let g:undotree_diffpanelHeight=25
+let g:undotree_RelativeTimestamp=1
+let g:undotree_TreeNodeShape='*'
+let g:undotree_HighlightChangeText=1
+let g:undotree_HighlightSyntax="UnderLined"
+
+" YankRing.vim設定
+nmap ,y :YRShow<CR>
