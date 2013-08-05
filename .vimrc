@@ -192,3 +192,5 @@ let g:ref_source_webdict_encoding = 'UTF-8'
 
 " YankRing.vim設定
 nmap ,y :YRShow<CR>
+
+nnoremap t :tabnew<CR>
