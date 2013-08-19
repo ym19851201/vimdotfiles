@@ -8,9 +8,9 @@ endif
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'ZenCoding.vim'
+NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/vimfiler'
-"NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'h1mesuke/unite-outline'
@@ -18,8 +18,9 @@ NeoBundle 'EnhCommentify.vim'
 NeoBundle 'rails.vim'
 NeoBundle 'open-browser.vim'
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'YankRing.vim'
+NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'alpaca-tc/alpaca_powertabline'
 
 filetype plugin on
 filetype indent on
@@ -34,7 +35,7 @@ source ~/vimdotfiles/.vimrc.unite
 source ~/vimdotfiles/.vimrc.neocomplcache
 
 " クリップボード共通か設定
-set clipboard=unnamed,autoselect
+"set clipboard=unnamed,autoselect
 "ヤンクやりやすくなる？
 vnoremap <silent> <C-p> "0p<CR>"
 

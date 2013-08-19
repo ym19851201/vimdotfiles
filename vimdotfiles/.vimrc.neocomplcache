@@ -93,3 +93,6 @@ let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 let g:neocomplcache_enable_ignore_case=1
 inoremap <expr><CR> pumvisible() ? neocomplcache#close_popup() : "<CR>"
+
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)

@@ -1,5 +1,6 @@
 "SpellRare
 "hi Pmenu ctermbg=lightcyan ctermfg=black
+set t_Co=256
 set background=dark
 hi Pmenu ctermbg=green ctermfg=black
 hi PmenuSel ctermbg=4
