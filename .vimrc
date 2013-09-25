@@ -43,7 +43,7 @@ vnoremap <silent> <C-p> "0p<CR>"
 set number
 ".vimrc読み込み
 nmap ,s :source ~/.vimrc<CR>
-nmap .rc :vsp<CR>:e ~/.vimrc<CR>
+nmap ,rc :vsp<CR>:e ~/.vimrc<CR>
 
 " カレントディレクトリコマンド
 nmap ,cd :cd %:h<CR>
@@ -195,3 +195,5 @@ let g:ref_source_webdict_encoding = 'UTF-8'
 nmap ,y :YRShow<CR>
 
 nnoremap t :tabnew<CR>
+
+set smartcase

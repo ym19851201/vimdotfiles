@@ -26,3 +26,5 @@ nnoremap ,vf :VimFiler -split -simple -winwidth=35 -no-quit<CR>
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 nnoremap <silent> ,fe :<C-u>VimFilerBufferDir -quit<CR>
+" outline
+nnoremap <silent> ,o :<C-u>Unite -vertical -no-quit -winwidth=40 outline<CR>
