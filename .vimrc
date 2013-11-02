@@ -21,6 +21,7 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'alpaca-tc/alpaca_powertabline'
+NeoBundle 'mattn/mkdpreview-vim'
 
 filetype plugin on
 filetype indent on
